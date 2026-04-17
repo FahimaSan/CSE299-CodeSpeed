@@ -1,0 +1,100 @@
+/* General Styles */
+body {
+  font-family: 'Arial Narrow Bold', sans-serif;
+  text-align: center;
+  background-color: #f4f4f9;
+  color: #000;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+body.dark-mode {
+  background-color: #121212;
+  color: #fff;
+}
+body.dark-mode .snippet-display {
+  background-color: #1e1e1e;
+  color: #ddd;
+  border-color: #444;
+}
+
+/* Stats Section */
+.stats {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-around;
+  background-color: #fff;
+  padding: 15px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  transition: background-color 0.3s;
+}
+
+body.dark-mode .stats {
+  background-color: #2d2d2d;
+  box-shadow: 0 2px 5px rgba(255,255,255,0.1);
+}
+
+.stats p {
+  font-size: 22px;
+  margin: 0;
+}
+
+/* Try Again  Button */
+button {
+  padding: 10px 15px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 10px 0 20px;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+/* Results Card */
+.results-card {
+  max-width: 400px;
+  margin: 40px auto;
+  padding: 30px;
+  background-color: #fff;
+  border-radius: 16px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: background-color 0.3s ease;
+}
+
+body.dark-mode .results-card {
+  background-color: #1e1e1e;
+  color: #f1f1f1;
+}
+
+.results-card h2 {
+  margin-bottom: 20px;
+  font-size: 26px;
+}
+
+.results-card p {
+  font-size: 20px;
+  margin: 12px 0;
+}
+
+.results-card .btn {
+  margin-top: 20px;
+}
+/* Chart Container */
+.chart-container {
+  margin: 20px 0;
+  height: 300px;
+  width: 100%;
+}
+
+body.dark-mode .chart-container {
+  background-color: #726e6e;
+  
+  border-radius: 8px;
+  padding: 10px;
+}

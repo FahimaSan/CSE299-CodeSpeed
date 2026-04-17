@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+  <script src="results.js"></script>
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>CodeSpeed - Results</title>
+  <link rel="stylesheet" href="Coding_Test.css" />
+</head>
+<body>
+
+  <div id="results-container" class="results-card">
+    <h2>🧠 Your Performance</h2>
+    <p><strong>WPM:</strong> <span id="wpm"></span></p>
+    <p><strong>Accuracy(%):</strong> <span id="accuracy"></span></p>
+    <p><strong>Duration:</strong> <span id="duration"></span> seconds</p>
+
+    <div class="chart-container">
+      <canvas id="performanceChart"></canvas>
+  </div>
+    <button id="try-again" class="btn">🔁 Try Again</button>
+    
+  </div>
+
+  <script>
+    document.getElementById("wpm").textContent = localStorage.getItem("wpm") || "N/A";
+    document.getElementById("accuracy").textContent = localStorage.getItem("accuracy") || "N/A";
+    document.getElementById("duration").textContent = localStorage.getItem("duration") || "N/A";
+
+    document.getElementById("try-again").addEventListener("click", () => {
+      window.location.href = "Coding_Test.html";
+    });
+
+    if (localStorage.getItem("theme") === "dark" || "dracula") {
+      document.body.classList.add("dark-mode");
+    }
+  </script>
+</body>
+</html>

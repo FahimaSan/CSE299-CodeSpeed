@@ -1,0 +1,221 @@
+body.dark-mode {
+  background-color: #121212;
+  color: #f0f0f0;
+}
+
+.profile-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: linear-gradient(to right, #f5f7fa, #c3cfe2);
+  min-height: 100vh;
+  font-family: 'Segoe UI', sans-serif;
+  padding: 20px;
+}
+
+body.dark-mode .profile-container {
+  background: #121212;
+}
+
+.profile-box {
+  display: flex;
+  width: 900px;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  margin-bottom: 30px;
+}
+body.dark-mode .profile-box {
+  background: #1e1e1e;
+  box-shadow: 0 10px 30px rgba(255, 255, 255, 0.05);
+}
+
+.profile-left {
+  flex: 1;
+  padding: 40px;
+  background: #ffffff;
+}
+body.dark-mode .profile-left {
+  background: #1e1e1e;
+}
+
+
+.profile-left h2 {
+  font-size: 28px;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+body.dark-mode .profile-left h2 {
+  color: #f5f5f5;
+}
+
+.input-group {
+  margin-bottom: 20px;
+}
+
+.input-group label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 6px;
+  color: #444;
+}
+
+body.dark-mode .input-group label {
+  color: #ccc;
+}
+.input-group input[type="text"],
+.input-group input[type="email"],
+.input-group input[type="password"] {
+  width: 100%;
+  padding: 12px 15px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 16px;
+  background: #f9f9f9;
+}
+
+body.dark-mode .input-group input {
+  background: #2c2c2c;
+  color: #f5f5f5;
+  border: 1px solid #555;
+}
+.edit-btn{
+  padding: 12px 25px;
+  background:  #5bc6a4;
+  color: #fff;
+  border: none;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.save-btn {
+  padding: 12px 25px;
+  background: #3b3974;
+  color: #fff;
+  border: none;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+.edit-btn:hover{
+  background: #282a36;
+}
+
+.save-btn:hover {
+  background: #45a049;
+}
+
+.profile-pic-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+}
+body.dark-mode .profile-pic-section input[type="file"] {
+  color: #ccc;
+}
+
+.profile-image {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 10px;
+  border: 3px solid #5bc6a4 ;
+}
+
+.profile-pic-section input[type="file"] {
+  font-size: 14px;
+  padding: 6px;
+}
+
+.profile-right {
+  flex: 1;
+  background: linear-gradient(to bottom right, #5bc6a4, #282a36);
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+  text-align: center;
+}
+
+.profile-right h2 {
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+body.dark-mode .profile-right {
+  background: linear-gradient(to bottom right, #2e2e2e, #1a1a1a);
+}
+
+.profile-bottom {
+  display: flex;
+  gap: 40px;
+  width: 900px;
+  justify-content: space-between;
+}
+
+.performance-history,
+.suggestions-box {
+  flex: 1;
+  background: #ffffff;
+  padding: 20px 30px;
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+}
+
+.performance-history h3,
+.suggestions-box h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+body.dark-mode .performance-history,
+body.dark-mode .suggestions-box {
+  background: #1f1f1f;
+  color: #f0f0f0;
+  box-shadow: 0 6px 15px rgba(255, 255, 255, 0.05);
+}
+
+.performance-history p,
+.suggestions-box p {
+  font-size: 15px;
+  color: #666;
+}
+
+body.dark-mode .performance-history h3,
+body.dark-mode .suggestions-box h3 {
+  color: #f5f5f5;
+}
+
+body.dark-mode.performance-history p,
+body.dark-mode.suggestions-box p {
+  color: #bbb;
+}
+
+.view-history-btn {
+  background:  #5bc6a4;
+   
+  color: white;
+  padding: 12px 24px;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: background-color 0.3s ease;
+}
+
+.view-history-btn:hover {
+  background-color: #282a36;
+}

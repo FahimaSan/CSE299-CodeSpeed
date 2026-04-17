@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <!-- Add meta viewport for responsiveness -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Code Typing Test</title>
+  
+  <!-- CodeMirror CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.2/codemirror.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.2/theme/eclipse.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.2/theme/dracula.min.css">
+
+  <!-- Custom CSS -->
+  <style>
+    /* Ensure all elements use border-box sizing */
+    * {
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+      background-color: #f4f4f9;
+      color: #333;
+      transition: background-color 0.3s, color 0.3s;
+    }
+    body.dark-mode {
+      background-color: #121212;
+      color: #ddd;
+    }
+    /* Container to wrap the entire content */
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+    /* New container for spacing buttons */
+    .button-group {
+      display: flex;
+      justify-content: center;
+      gap: 20px; /* Space between buttons */
+      margin-bottom: 20px;
+      flex-wrap: wrap; /* Allow wrapping on small screens */
+    }
+    .editor-container {
+      margin-bottom: 20px;
+      width: 1200px;
+  
+    }
+    .stats {
+      margin-top: 10px;
+      text-align: center;
+    }
+    button {
+      padding: 8px 12px;
+      cursor: pointer;
+    }
+    .cm-correct {
+      color: green !important;
+    }
+    .cm-incorrect {
+      color: red !important;
+    }
+    .CodeMirror {
+      font-size: 21px; 
+      border-radius: 7px;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <h1>CodeSpeed</h1>
+
+  <!-- Wrap buttons in a container -->
+  <div class="button-group">
+    <button id="theme-toggle">🌗 Toggle Theme</button>
+    <button id="restart-button">🔁 Restart</button>
+    <button id="exit-button">Exit Test</button>
+
+  </div>
+  
+
+  <!-- Duration and language select options -->
+  <div style="text-align: center; margin-bottom: 20px;">
+    <label for="duration-select">Test Duration: </label>
+    <select id="duration-select">
+      <option value="120">120 seconds</option>
+      <option value="60" selected>60 seconds</option>
+      <option value="30">30 seconds</option>
+      <option value="unlimited">Infinite</option>
+    </select>
+
+    <label for="language-select">Programming Language:</label>
+    <select id="language-select">
+      <option value="javacript">Java</option>
+      <option value="python">Python</option>
+      <option value="cpp">C++</option>
+    </select>
+  </div>
+
+  <h3>Code Snippet:</h3>
+  <div class="editor-container">
+    <textarea id="snippet-editor"></textarea>
+  </div>
+
+  <h3>Start Typing:</h3>
+  <div class="editor-container">
+    <textarea id="typing-editor"></textarea>
+  </div>
+
+  <div class="stats">
+    Time Left: <span id="timer">60</span>s |
+    WPM: <span id="wpm">0</span> |
+    Accuracy: <span id="accuracy">100</span>%
+  </div>
+</div>
+
+<!-- CodeMirror JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.2/codemirror.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.2/mode/javascript/javascript.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/mode/python/python.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/mode/clike/clike.min.js"></script>
+
+<!-- Custom JavaScript -->
+<script src="script.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+</body>
+</html>
